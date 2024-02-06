@@ -18,7 +18,7 @@ function EditorNavbar({ onListElementClick }) {
                 <li className='list-element' onClick={handleListElementClick}>Dodaj Post</li>
             </ul>
             <div className='login-container'>
-                <span class="material-symbols-outlined login">
+                <span className="material-symbols-outlined login">
                     login
                 </span>
             </div>
