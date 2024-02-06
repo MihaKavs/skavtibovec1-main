@@ -28,14 +28,88 @@
     align-items: center;
     justify-content: center;
 }
+
 .login-container {
     width: 5%;
     height: 100%;
     text-align: center;
 }
-.login{
+
+.login {
     color: white;
     font-size: 2rem;
     cursor: pointer;
-    
+}
+
+.PostCreator-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.PostCreator-title {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.PostCreator-description {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+}
+
+.description {
+    max-width: 17rem;
+    min-width: 60%;
+    min-height: 6rem;
+    max-height: 6rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    background: repeating-linear-gradient(315deg,
+            rgb(66 143 149),
+            rgb(66 143 149) 70px,
+            rgb(197 197 201) 70px,
+            rgb(197 197 201) 168px);
+}
+
+.description::placeholder {
+    color: black;
+}
+
+.title-input {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: repeating-linear-gradient(315deg,
+            rgb(66 143 149),
+            rgb(66 143 149) 70px,
+            rgb(197 197 201) 70px,
+            rgb(197 197 201) 168px);
+}
+
+.title-input::placeholder {
+    color: black;
+}
+
+.radio-buttons {
+    width: 130%;
+}
+
+.veja-input {
+    margin-left: 0.5rem;
+}
+
+.veja-text {
+    color: white;
+    font-size: large;
+}
+
+.veja-input:checked {
+    background-color: rgb(66 143 149);
 }

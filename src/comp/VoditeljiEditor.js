@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Editor.css'
-import axios from 'axios'
-function PostCreator() {
+function VoditeljiEditor() {
     const [file, setFile] = useState();
     const [uploadedFile, setUploadedFile] = useState();
     const [error, setError] = useState();
@@ -32,7 +32,7 @@ function PostCreator() {
             });
     }
     return (
-        <div className='PostCreator-container'>
+        <div className='ostCreator-container'>
             <form onSubmit={handleSubmit}>
                 <div className='PostCreator-title'>
                     <input type='text' className='title-input' placeholder='vnesi naslov'></input>
@@ -46,14 +46,7 @@ function PostCreator() {
                 <div className='PostCreator-title'>
                     <input type='file' multiple className='title-input' placeholder='vnesi slike' onChange={handleChange}></input>
                 </div>
-                <div className='PostCreator-title radio-buttons'>
-                    <input type='radio' className='veja-input' name="veje" value="BB"></input> <label className='veja-text'>BB</label>
-                    <input type='radio' className='veja-input' name="veje" value="IV"></input> <label className='veja-text'>IV</label>
-                    <input type='radio' className='veja-input' name="veje" value="Klan"></input> <label className='veja-text'>Klan</label>
-                    <input type='radio' className='veja-input' name="veje" value="SKVO"></input> <label className='veja-text'>Skvo</label>
-                    <input type='radio' className='veja-input' name="veje" value="Steg"></input> <label className='veja-text'>Steg</label>
-                    <input type='radio' className='veja-input' name="veje" value="Vsi"></input> <label className='veja-text'>Vsi</label>
-                </div>
+
             </form>
             {uploadedFile && <img src={uploadedFile} alt="Uploaded content" />}
             {error && <p>Error uploading file: {error.message}</p>}
@@ -61,4 +54,4 @@ function PostCreator() {
     )
 }
 
-export default PostCreator
+export default VoditeljiEditor

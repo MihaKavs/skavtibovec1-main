@@ -46,11 +46,11 @@ function Navbar() {
                                 Domov
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        {/* <li className='nav-item'>
                             <Link className='nav-links' to='/PrejsnaLeta' onClick={closeMobileMenu}>
                                 Prejšna leta
                             </Link>
-                        </li>
+                        </li> */}
                         <li className='nav-item'>
                             <Link className='nav-links' to='/Onas' onClick={closeMobileMenu}>
                                 O nas
