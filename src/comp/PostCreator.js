@@ -16,6 +16,7 @@ function PostCreator() {
                 <div className='PostCreator-location'>
                     <input type='file' multiple className='title-input' placeholder='vnesi slike'></input>
                 </div>
+                
             </form>
         </div>
     )
