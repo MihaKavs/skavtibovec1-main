@@ -1,0 +1,52 @@
+.voditelj-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 20%;
+    border-radius: 2rem;
+    border: 0.2rem solid white;
+    overflow: hidden;
+}
+.voditelj-info {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    .voditelj-container {
+        margin: 2rem 32%;
+        width: 35%;
+    }
+    .voditelj-info {
+        width: 100%;
+    }
+}
+
+.voditelj-image {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 1.9rem 0rem 0rem 1.9rem;
+    min-width: 150px;
+    height: 100%;
+}
+
+
+.voditelj-name {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.voditelj-skavt-name {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.voditelj-description {
+    width: 100%;
+    color: white;
+    padding: 1rem;
+}

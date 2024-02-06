@@ -1,0 +1,104 @@
+.footer-container {
+    display: flex;
+    padding: 3rem 5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 0.3rem dashed white;
+}
+
+.information {
+    width: 48%;
+    min-width: 350px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.information>p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(66 143 149);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.socials {
+    width: 35%;
+    min-width: 350px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-left: 10%;
+}
+
+.imput-boxes {
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    background: repeating-linear-gradient(315deg,
+            rgb(66 143 149),
+            rgb(66 143 149) 70px,
+            rgb(197 197 201) 70px,
+            rgb(197 197 201) 168px);
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.imput-boxes::placeholder {
+    color: #000;
+    font-size: 1rem;
+}
+
+.main-box {
+    height: 6rem;
+    padding: 0.5rem;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 3rem;
+    max-height: 15rem;
+}
+
+.submit {
+    width: 50%;
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.social-links {
+    width: 100%;
+    height: 3rem;
+    min-width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: rgb(197 197 201);
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+@media only screen and (max-width: 600px) {  
+    .social-links {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+.firstLink {
+    margin-top: 0;
+}
+
+.SkavtiLogo {
+    width: 100%;
+    height: 6rem;
+    background-image: url("../../public/skavti.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.SkavtiLogo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}

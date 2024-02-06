@@ -1,0 +1,57 @@
+.veje-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-left: 20%;
+    text-decoration: none;
+}
+.veje-title{
+    width: 100%;
+    height: 5rem;
+}
+.veje-title-text{
+    width: 100%;
+    height: 100%;
+    border-top: 0.2rem solid whitesmoke;
+    border-bottom: 0.2rem solid whitesmoke;
+    font-size: 2rem;
+    color: antiquewhite;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.veja-list-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+}
+.veja-container {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    padding: 0rem 0.5rem;
+    min-width: 150px;
+}
+.veja-img{
+    width: 100%;
+    border-radius: 11rem;
+    cursor: pointer;
+    border: 0.2rem solid white;
+}
+.veja-name {
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    height: 7rem;
+}
+.veja-opis {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
