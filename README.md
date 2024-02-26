@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# first setup
+npm install
+npm install axios
+npm install react-beautiful-dnd
+npm start
+
+
+
+
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

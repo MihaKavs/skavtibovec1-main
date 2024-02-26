@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './Editor.css'
 function VoditeljiEditor(props) {
     const [file, setFile] = useState();
@@ -31,15 +32,56 @@ function VoditeljiEditor(props) {
                 setError(error);
             });
     }
-    
+    const [voditelji, setVoditelji] = useState([
+        { id: '1', name: 'Miha Kavs' },
+        { id: '2', name: 'Nikita Kavs' },
+        { id: '3', name: 'Alex Copato'}
+    ]); 
+
+    const onDragEnd = (result) => {
+        if (!result.destination) return;
+
+        const items = Array.from(voditelji);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+
+        setVoditelji(items);
+    };
+    function editVoditelj(){
+        //TODO: handle edit
+    }
+    function removeVoditelj(){
+        //TODO: handle removal
+    }
+    function addVoditelj(){
+        //TODO: handle addition
+    }
     return (
         <div className='container'>
-            <div className='list-conatiner-voditelji'>
-                <ul className='voditelji-list'>
-                    <li className='list-element-voditelji'>Miha Kavs</li>
-                    <li className='list-element-voditelji'>Nikita Kavs</li>
-                </ul>
-            </div>
+            <DragDropContext onDragEnd={onDragEnd}>
+                <Droppable droppableId="droppable">
+                    {(provided) => (
+                        <ul className='voditelji-list' {...provided.droppableProps} ref={provided.innerRef}>
+                        <p className='sort-text'>Razvrsti voditelje po vrsti</p>
+                            {voditelji.map((item, index) => (
+                                <Draggable key={item.id} draggableId={item.id} index={index}>
+                                    {(provided) => (
+                                        <li
+                                            className='list-element-voditelji'
+                                            {...provided.draggableProps}
+                                            {...provided.dragHandleProps}
+                                            ref={provided.innerRef}
+                                        >
+                                            {item.name}
+                                        </li>
+                                    )}
+                                </Draggable>
+                            ))}
+                            {provided.placeholder}
+                        </ul>
+                    )}
+                </Droppable>
+            </DragDropContext>
             <div className='PostCreator-container voditelj-config'>
                 <form onSubmit={handleSubmit} className='voditelj-editor-forum'>
                     <div className='PostCreator-title'>
@@ -52,12 +94,12 @@ function VoditeljiEditor(props) {
                         <textarea className='description input' required placeholder='opis'></textarea>
                     </div>
                     <div className='PostCreator-title'>
-                        <input type='file' multiple className='title-input' required placeholder='vnesi slike' onChange={handleChange}></input>
+                        <input type='file' multiple className='title-input fileselector' required placeholder='vnesi slike' onChange={handleChange}></input>
                     </div>
                     <div className='submit-buttons'>
-                        <input type='submit' className='edit-button edit' value={'Uredi'}></input>
-                        <input type='submit' className='edit-button remove' value={'Izbriši'}></input>
-                        <input type='submit' className='edit-button add' value={'Dodaj'}></input>
+                        <input type='submit' onClick={editVoditelj} className='edit-button edit' value={'Uredi'}></input>
+                        <input type='submit' onClick={removeVoditelj} className='edit-button remove' value={'Izbriši'}></input>
+                        <input type='submit' onClick={addVoditelj} className='edit-button add' value={'Dodaj'}></input>
                     </div>
                 </form>
                 {uploadedFile && <img src={uploadedFile} alt="Uploaded content" />}

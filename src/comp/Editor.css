@@ -1,6 +1,6 @@
 .navbar-editor-container {
     width: 100%;
-    height: 10%;
+    height: 80px;
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
@@ -14,7 +14,8 @@
 }
 
 .list-conatiner {
-    width: 65%;
+    width: 100%;
+    height: 100%;
     display: flex;
     cursor: pointer;
 }
@@ -40,6 +41,34 @@
     color: white;
     font-size: 2rem;
     cursor: pointer;
+}
+.list-parrent {
+    width: 65%;
+    cursor: pointer;
+}
+.burger-menu{
+    display: none;
+}
+@media screen and (max-width: 960px) {
+    .list-conatiner{
+        flex-direction: column;
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        top: 160px;
+        background: repeating-linear-gradient(315deg,
+            rgb(66 143 149),
+            rgb(66 143 149) 70px,
+            rgb(197 197 201) 70px,
+            rgb(197 197 201) 168px);
+    }
+    .list-element{
+        height: 10%;
+        width: 100%;
+    }
+    .burger-menu{
+        display: block;
+    }
 }
 
 .PostCreator-container {
@@ -114,8 +143,9 @@
 .veja-input:checked {
     background-color: rgb(66 143 149);
 }
-.post-submit{
-    
+
+.post-submit {
+
     width: 40%;
     padding: 1rem;
     margin: 1rem;
@@ -129,24 +159,26 @@
             rgb(197 197 201) 168px);
     font-size: x-large;
     cursor: pointer;
-    
+
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
 }
-.voditelj-config{
+
+.voditelj-config {
     width: 80%;
 }
-.list-conatiner-voditelji{
+
+.list-conatiner-voditelji {
     width: 20%;
     padding: 1rem;
 
 }
 
-.list-element-voditelji{
+.list-element-voditelji {
     width: 100%;
     color: white;
     font-size: x-large;
@@ -154,18 +186,36 @@
     padding: 0.5rem;
     border: 0.1rem solid white;
 }
-.voditelji-list{
+
+.voditelji-list {
     list-style: none;
 }
-.voditelj-editor-forum{
+
+.voditelj-editor-forum {
     width: 70%;
 }
-.submit-buttons{
+
+@media only screen and (max-width: 600px) {
+    .voditelj-config {
+        width: 100%;
+    }
+
+    .voditelji-list {
+        width: 100%;
+    }
+
+    .voditelj-editor-forum {
+        width: 100%;
+    }
+}
+
+.submit-buttons {
     width: 100%;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
+
 .edit-button {
     margin: 1rem;
     width: 20%;
@@ -173,13 +223,27 @@
     font-size: x-large;
     border: none;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
-.edit{
+
+.edit {
     background-color: #ffc800;
 }
-.remove{
+
+.remove {
     background-color: #ff2a2a;
 }
-.add{
+
+.add {
     background-color: #16ff16;
+}
+
+.sort-text {
+    color: azure;
+    font-size: x-large;
+    margin-bottom: 0.5rem;
+}
+
+.fileselector {
+    cursor: pointer;
 }
