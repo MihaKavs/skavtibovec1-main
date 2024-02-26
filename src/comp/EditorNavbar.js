@@ -1,7 +1,7 @@
 import React from 'react';
 import './Editor.css';
 
-function EditorNavbar({ onListElementClick }) {
+function EditorNavbar({ onListElementClick, profile }) {
   const handleListElementClick = (index) => {
     switch (index) {
       case 'PostCreator':
@@ -18,7 +18,7 @@ function EditorNavbar({ onListElementClick }) {
   //TODO: nared vse editorje
   return (
     <div className='navbar-editor-container'>
-      <div className='profile'>bra</div>
+      <div className='profile'>{profile}</div>
       <ul className='list-conatiner'>
         <li className='list-element' onClick={() => handleListElementClick('PostCreator')}>
           Dodaj Post

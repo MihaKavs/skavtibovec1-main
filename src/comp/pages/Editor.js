@@ -10,7 +10,7 @@ function Editor() {
     };
     return (
         <>
-            <EditorNavbar onListElementClick={handleListElementClick}></EditorNavbar>
+            <EditorNavbar profile="Kavsič" onListElementClick={handleListElementClick}></EditorNavbar>
             {displayedComponent === 'PostCreator' && <PostCreator />}
             {displayedComponent === 'VoditeljEditor' && <VoditeljiEditor />}
         </>

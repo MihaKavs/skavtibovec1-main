@@ -3,6 +3,7 @@
     height: 10%;
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .profile {
@@ -64,8 +65,8 @@
 }
 
 .description {
-    max-width: 17rem;
-    min-width: 60%;
+    max-width: 100%;
+    min-width: 100%;
     min-height: 6rem;
     max-height: 6rem;
     padding: 0.3rem;
@@ -112,4 +113,73 @@
 
 .veja-input:checked {
     background-color: rgb(66 143 149);
+}
+.post-submit{
+    
+    width: 40%;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: 30%;
+    border-radius: 0.5rem;
+    border: none;
+    background: repeating-linear-gradient(315deg,
+            rgb(66 143 149),
+            rgb(66 143 149) 70px,
+            rgb(197 197 201) 70px,
+            rgb(197 197 201) 168px);
+    font-size: x-large;
+    cursor: pointer;
+    
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.voditelj-config{
+    width: 80%;
+}
+.list-conatiner-voditelji{
+    width: 20%;
+    padding: 1rem;
+
+}
+
+.list-element-voditelji{
+    width: 100%;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 0.1rem solid white;
+}
+.voditelji-list{
+    list-style: none;
+}
+.voditelj-editor-forum{
+    width: 70%;
+}
+.submit-buttons{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.edit-button {
+    margin: 1rem;
+    width: 20%;
+    padding: 0.5rem;
+    font-size: x-large;
+    border: none;
+    border-radius: 0.5rem;
+}
+.edit{
+    background-color: #ffc800;
+}
+.remove{
+    background-color: #ff2a2a;
+}
+.add{
+    background-color: #16ff16;
 }

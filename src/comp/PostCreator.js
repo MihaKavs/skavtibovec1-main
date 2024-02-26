@@ -35,16 +35,16 @@ function PostCreator() {
         <div className='PostCreator-container'>
             <form onSubmit={handleSubmit}>
                 <div className='PostCreator-title'>
-                    <input type='text' className='title-input' placeholder='vnesi naslov'></input>
+                    <input type='text' className='title-input' required placeholder='vnesi naslov'></input>
                 </div>
                 <div className='PostCreator-title'>
-                    <input type='text' className='title-input' placeholder='vnesi lokacijo'></input>
+                    <input type='text' className='title-input' required placeholder='vnesi lokacijo'></input>
                 </div>
                 <div className='PostCreator-description'>
-                    <textarea className='description input' placeholder='opis'></textarea>
+                    <textarea className='description input'  required placeholder='opis'></textarea>
                 </div>
                 <div className='PostCreator-title'>
-                    <input type='file' multiple className='title-input' placeholder='vnesi slike' onChange={handleChange}></input>
+                    <input type='file' multiple className='title-input' required placeholder='vnesi slike' onChange={handleChange}></input>
                 </div>
                 <div className='PostCreator-title radio-buttons'>
                     <input type='radio' className='veja-input' name="veje" value="BB"></input> <label className='veja-text'>BB</label>
@@ -52,8 +52,8 @@ function PostCreator() {
                     <input type='radio' className='veja-input' name="veje" value="Klan"></input> <label className='veja-text'>Klan</label>
                     <input type='radio' className='veja-input' name="veje" value="SKVO"></input> <label className='veja-text'>Skvo</label>
                     <input type='radio' className='veja-input' name="veje" value="Steg"></input> <label className='veja-text'>Steg</label>
-                    <input type='radio' className='veja-input' name="veje" value="Vsi"></input> <label className='veja-text'>Vsi</label>
                 </div>
+                <input type='submit'   value={'objavi'} className='post-submit' name='submit'></input>
             </form>
             {uploadedFile && <img src={uploadedFile} alt="Uploaded content" />}
             {error && <p>Error uploading file: {error.message}</p>}
