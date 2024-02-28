@@ -78,6 +78,7 @@ function VoditeljiEditor(props) {
                                 </Draggable>
                             ))}
                             {provided.placeholder}
+                            <button className='list-submitt'>Zamenjaj zaporedje</button>
                         </ul>
                     )}
                 </Droppable>

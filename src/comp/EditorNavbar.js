@@ -10,6 +10,9 @@ function EditorNavbar({ onListElementClick, profile }) {
       case 'VoditeljEditor':
         onListElementClick('VoditeljEditor');
         break; // Add break to prevent fall-through
+      case 'ONasEditor':
+        onListElementClick('ONasEditor');
+        break;
       default:
         break;
     }
@@ -35,6 +38,9 @@ function EditorNavbar({ onListElementClick, profile }) {
           </li>
           <li className='list-element' onClick={() => handleListElementClick('VoditeljEditor')}>
             Edit voditeljev
+          </li>
+          <li className='list-element' onClick={() => handleListElementClick('ONasEditor')}>
+            Edit O nas
           </li>
         </ul>
       </div>
